@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Code, Coffee, Gamepad2, Music, Zap, Star, Rocket, GraduationCap, MapPin } from 'lucide-react';
+import { Code, Coffee, Gamepad2, Book, Zap, Star, Rocket, GraduationCap, MapPin } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +10,7 @@ const About = () => {
     { icon: Code, label: 'Coding', color: 'text-blue-400', bg: 'from-blue-500/20 to-blue-600/20' },
     { icon: Coffee, label: 'Coffee', color: 'text-amber-400', bg: 'from-amber-500/20 to-amber-600/20' },
     { icon: Gamepad2, label: 'Gaming', color: 'text-green-400', bg: 'from-green-500/20 to-green-600/20' },
-    { icon: Music, label: 'Music', color: 'text-purple-400', bg: 'from-purple-500/20 to-purple-600/20' },
+    { icon: Book, label: 'reading', color: 'text-purple-400', bg: 'from-purple-500/20 to-purple-600/20' },
   ];
 
   useEffect(() => {

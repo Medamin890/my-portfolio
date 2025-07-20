@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail, Download, ChevronDown, Sparkles, Zap } from 'lucide-react';
 
 const Hero = () => {
@@ -98,7 +98,8 @@ const Hero = () => {
         <div className="mb-8 space-y-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in-up relative">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent hover:animate-pulse transition-all duration-300">
-              Mohamed Amine Sadraoui
+              Mohamed Amine
+              Sadraoui
             </span>
             
             {/* Lightning effect on hover */}

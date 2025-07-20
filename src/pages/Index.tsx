@@ -1,6 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Database, Smartphone, Globe } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
