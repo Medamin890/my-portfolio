@@ -1,4 +1,4 @@
-import  { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Code, Coffee, Gamepad2, BookOpen, Zap, Star, Rocket, GraduationCap, MapPin } from 'lucide-react';
 
 const About = () => {
@@ -117,16 +117,117 @@ const About = () => {
                 </div>
               </div>
               
-      
+              {/* Enhanced Stats */}
+              <div className="grid grid-cols-2 gap-6 mt-8">
+                <div className="group text-center p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="text-4xl font-bold text-blue-400 group-hover:scale-125 transition-transform duration-500 relative z-10">
+                    10+
+                    <Rocket className="inline-block w-6 h-6 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="text-gray-400 relative z-10">Projects Completed</div>
+                  
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    {[...Array(6)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute w-1 h-1 bg-blue-400 rounded-full animate-ping"
+                        style={{
+                          left: `${20 + Math.random() * 60}%`,
+                          top: `${20 + Math.random() * 60}%`,
+                          animationDelay: `${i * 0.1}s`
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="group text-center p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="text-4xl font-bold text-purple-400 group-hover:scale-125 transition-transform duration-500 relative z-10">
+                    2+
+                    <Zap className="inline-block w-6 h-6 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="text-gray-400 relative z-10">Years Experience</div>
+                  
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    {[...Array(6)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute w-1 h-1 bg-purple-400 rounded-full animate-ping"
+                        style={{
+                          left: `${20 + Math.random() * 60}%`,
+                          top: `${20 + Math.random() * 60}%`,
+                          animationDelay: `${i * 0.1}s`
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interests with advanced hover effects */}
+            <div className={`space-y-6 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                What I Love
+                <div className="ml-3 w-8 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse"></div>
+              </h3>
+              
+              <div className="grid grid-cols-2 gap-4">
+                {interests.map((interest, index) => (
+                  <div
+                    key={interest.label}
+                    className={`group relative flex items-center space-x-3 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer overflow-hidden ${
+                      hoveredInterest === index ? 'shadow-2xl shadow-blue-500/25' : ''
+                    }`}
+                    style={{ animationDelay: `${0.7 + index * 0.1}s` }}
+                    onMouseEnter={() => setHoveredInterest(index)}
+                    onMouseLeave={() => setHoveredInterest(null)}
+                  >
+                    {/* Animated background */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${interest.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                    
+                    <div className={`relative z-10 p-3 rounded-lg bg-gray-700/50 group-hover:bg-gray-600/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                      <interest.icon className={`h-6 w-6 ${interest.color} group-hover:animate-pulse`} />
+                    </div>
+                    
+                    <span className="relative z-10 text-gray-300 group-hover:text-white transition-colors duration-500 font-medium">
+                      {interest.label}
+                    </span>
+                    
+                    {/* Sparkle effects */}
+                    {hoveredInterest === index && (
+                      <div className="absolute inset-0 pointer-events-none">
+                        {[...Array(4)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="absolute w-1 h-1 bg-white rounded-full animate-ping"
+                            style={{
+                              left: `${20 + Math.random() * 60}%`,
+                              top: `${20 + Math.random() * 60}%`,
+                              animationDelay: `${i * 0.2}s`
+                            }}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
               {/* Enhanced Quote */}
               <div className={`group mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-500 hover:scale-105 relative overflow-hidden ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <blockquote className="text-gray-300 italic text-center relative z-10 group-hover:text-white transition-colors duration-500">
-                  “The only way to learn a new programming language is by writing programs in it.”
-                </blockquote>
+                  The only way to learn a new programming language is by writing programs in it.”
+                               
+                  </blockquote>
                 <cite className="block text-right text-blue-400 mt-2 relative z-10 group-hover:text-blue-300 transition-colors duration-500">
-                  - Dennis Ritchie, creator of C
+                  - Dennis Ritchie, creator of C   
                 </cite>
                 
                 {/* Quote decoration */}
@@ -136,107 +237,6 @@ const About = () => {
             </div>
           </div>
         </div>
-         
-        {/* Interests with advanced hover effects */}
-        <div className={`space-y-6 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-          <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-            What I Love
-            <div className="ml-3 w-8 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse"></div>
-          </h3>
-          
-          <div className="grid grid-cols-2 gap-4">
-            {interests.map((interest, index) => (
-              <div
-                key={interest.label}
-                className={`group relative flex items-center space-x-3 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer overflow-hidden ${
-                  hoveredInterest === index ? 'shadow-2xl shadow-blue-500/25' : ''
-                }`}
-                style={{ animationDelay: `${0.7 + index * 0.1}s` }}
-                onMouseEnter={() => setHoveredInterest(index)}
-                onMouseLeave={() => setHoveredInterest(null)}
-              >
-                {/* Animated background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${interest.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                
-                <div className={`relative z-10 p-3 rounded-lg bg-gray-700/50 group-hover:bg-gray-600/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
-                  <interest.icon className={`h-6 w-6 ${interest.color} group-hover:animate-pulse`} />
-                </div>
-                
-                <span className="relative z-10 text-gray-300 group-hover:text-white transition-colors duration-500 font-medium">
-                  {interest.label}
-                </span>
-                
-                {/* Sparkle effects */}
-                {hoveredInterest === index && (
-                  <div className="absolute inset-0 pointer-events-none">
-                    {[...Array(4)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="absolute w-1 h-1 bg-white rounded-full animate-ping"
-                        style={{
-                          left: `${20 + Math.random() * 60}%`,
-                          top: `${20 + Math.random() * 60}%`,
-                          animationDelay: `${i * 0.2}s`
-                        }}
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          {/* Enhanced Stats */}
-          <div className="grid grid-cols-2 gap-6 mt-8">
-            <div className="group text-center p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="text-4xl font-bold text-blue-400 group-hover:scale-125 transition-transform duration-500 relative z-10">
-                10+
-                <Rocket className="inline-block w-6 h-6 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-              <div className="text-gray-400 relative z-10">Projects Completed</div>
-              
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {[...Array(6)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-1 h-1 bg-blue-400 rounded-full animate-ping"
-                    style={{
-                      left: `${20 + Math.random() * 60}%`,
-                      top: `${20 + Math.random() * 60}%`,
-                      animationDelay: `${i * 0.1}s`
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-            
-            <div className="group text-center p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="text-4xl font-bold text-purple-400 group-hover:scale-125 transition-transform duration-500 relative z-10">
-                2+
-                <Zap className="inline-block w-6 h-6 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-              <div className="text-gray-400 relative z-10">Years Experience</div>
-              
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {[...Array(6)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-1 h-1 bg-purple-400 rounded-full animate-ping"
-                    style={{
-                      left: `${20 + Math.random() * 60}%`,
-                      top: `${20 + Math.random() * 60}%`,
-                      animationDelay: `${i * 0.1}s`
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-          </div>
-
       </div>
     </section>
   );
