@@ -1,5 +1,5 @@
 
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Code, Database, Smartphone, Globe, Server, Palette, Zap, Star, Sparkles, Brain, Users, Clock } from 'lucide-react';
 
 const Skills = () => {
@@ -15,10 +15,10 @@ const Skills = () => {
       borderColor: 'border-blue-500/50',
       skills: [
         { name: 'JavaScript', level: 90 },
-        { name: 'Java', level: 85 },
+        { name: 'Java', level: 95 },
         { name: 'Python', level: 80 },
-        { name: 'C/C#', level: 75 },
-        { name: 'PHP', level: 70 },
+        { name: 'C/C#', level: 80 },
+        { name: 'PHP', level: 75 },
       ]
     },
     {
@@ -56,8 +56,8 @@ const Skills = () => {
       borderColor: 'border-orange-500/50',
       skills: [
         { name: 'Android (Java)', level: 80 },
-        { name: 'Android Studio', level: 85 },
-        { name: 'Mobile UI/UX', level: 75 },
+        { name: 'Android Studio', level: 80 },
+        { name: 'Mobile UI/UX', level: 85 },
       ]
     },
     {
@@ -67,8 +67,8 @@ const Skills = () => {
       borderColor: 'border-teal-500/50',
       skills: [
         { name: 'MongoDB', level: 85 },
-        { name: 'MySQL', level: 90 },
-        { name: 'Oracle', level: 75 },
+        { name: 'MySQL', level: 99 },
+        { name: 'Oracle', level: 99 },
         { name: 'SQLite', level: 80 },
       ]
     },
@@ -80,7 +80,7 @@ const Skills = () => {
       skills: [
         { name: 'Git/GitHub', level: 90 },
         { name: 'Agile/Scrum', level: 85 },
-        { name: 'PowerBI', level: 75 },
+        { name: 'PowerBI', level: 85 },
         { name: 'Postman', level: 85 },
       ]
     },
@@ -160,11 +160,11 @@ const Skills = () => {
         </div>
 
         {/* Enhanced Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className={`group relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:${category.borderColor} rounded-xl p-6 transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer overflow-hidden ${
+              className={`group relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:${category.borderColor} rounded-xl p-6 transition-transform duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer  ${
                 isVisible ? 'animate-scale-in opacity-100' : 'opacity-0'
               }`}
               style={{ 
