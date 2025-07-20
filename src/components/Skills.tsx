@@ -1,5 +1,5 @@
 
-import { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Code, Database, Smartphone, Globe, Server, Palette, Zap, Star, Sparkles, Brain, Users, Clock } from 'lucide-react';
 
 const Skills = () => {
@@ -164,7 +164,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className={`group relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:${category.borderColor} rounded-xl p-6 transition-transform duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer  ${
+              className={`group relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:${category.borderColor} rounded-xl p-6 transition-transform duration-500 hover:scale-125 hover:-translate-y-2 cursor-pointer will-change-transform z-10 ${
                 isVisible ? 'animate-scale-in opacity-100' : 'opacity-0'
               }`}
               style={{ 
