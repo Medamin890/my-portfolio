@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { ExternalLink, Github, Code, Smartphone, Globe, Database, Zap, Star, Eye, Sparkles, Calendar, Building2 } from 'lucide-react';
-
+import { ExternalLink, Github, Code, Smartphone, Globe, Zap, Star, Eye, Sparkles, Calendar, Building2 } from 'lucide-react';
+import techstoreimg from '../assets/techstore.png'
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -24,7 +24,7 @@ const Projects = () => {
     {
       title: 'E-commerce Platform',
       description: 'A modern, secure e-commerce website with integrated Stripe payment system, responsive design, and comprehensive product management.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+      image: techstoreimg ,
       technologies: ['React.js', 'Node.js', 'Express', 'MongoDB ,tailwind css'],
       category: 'Web Application',
       icon: Globe,

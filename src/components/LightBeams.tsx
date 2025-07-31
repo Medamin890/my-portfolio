@@ -1,6 +1,4 @@
 
-import React from 'react';
-
 const LightBeams = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-1 opacity-20 overflow-hidden">
