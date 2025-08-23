@@ -71,14 +71,14 @@ const Hero = () => {
                 
                 {/* Sparkle effects on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {[...Array(8)].map((_, i) => (
+                  {[...Array(15)].map((_, i) => (
                     <Sparkles
                       key={i}
                       className="absolute w-4 h-4 text-yellow-400 animate-ping"
                       style={{
-                        left: `${Math.random() * 80 + 10}%`,
-                        top: `${Math.random() * 80 + 10}%`,
-                        animationDelay: `${i * 0.2}s`
+                      left: `${20 + Math.random() * 60}%`,
+                      top: `${20 + Math.random() * 60}%`,
+                        animationDelay: `${i * 0.4}s`
                       }}
                     />
                   ))}

@@ -139,8 +139,8 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-            <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
           </div>
           <p className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
             © 2025 Mohamed Amine Portfolio - Full Stack Developer

@@ -1,11 +1,10 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Code, Coffee, Gamepad2, BookOpen, Zap, Star, Rocket, GraduationCap, MapPin } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredInterest, setHoveredInterest] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
-
   const interests = [
     { icon: Code, label: 'Coding', color: 'text-blue-400', bg: 'from-blue-500/20 to-blue-600/20' },
     { icon: Coffee, label: 'Coffee', color: 'text-amber-400', bg: 'from-amber-500/20 to-amber-600/20' },
@@ -219,17 +218,15 @@ const About = () => {
                 </div>
               </div>
               {/* Enhanced Quote */}
-              <div className={`group mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-500 hover:scale-105 relative overflow-hidden ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
+              <div className={`group mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-transform duration-500 group-hover:scale-105 relative overflow-hidden  ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <blockquote className="text-gray-300 italic text-center relative z-10 group-hover:text-white transition-colors duration-500">
-                  The only way to learn a new programming language is by writing programs in it.”
-                               
-                  </blockquote>
-                <cite className="block text-right text-blue-400 mt-2 relative z-10 group-hover:text-blue-300 transition-colors duration-500">
-                  - Dennis Ritchie, creator of C   
-                </cite>
-                
+                  Simplicity is the soul of efficiency.
+                </blockquote>
+                <blockquote className="text-gray-300 italic text-center relative z-10 group-hover:text-white transition-colors duration-500">
+                  First, solve the problem. Then, write the code.
+                </blockquote>
                 {/* Quote decoration */}
                 <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
                 <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
