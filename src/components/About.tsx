@@ -168,7 +168,7 @@ const About = () => {
                 ))}
               </div>
               {/* Enhanced Stats */}
-              <div className="grid grid-cols-2 gap-6 mt-4">
+              <div className="flex w-full mt-4">
                 <div className="group text-center p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
@@ -193,7 +193,7 @@ const About = () => {
                   </div>
                 </div>
                 
-                <div className="group text-center p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
+                {/* <div className="group text-center p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="text-4xl font-bold text-purple-400 group-hover:scale-125 transition-transform duration-500 relative z-10">
@@ -215,15 +215,22 @@ const About = () => {
                       />
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
               {/* Enhanced Quote */}
-              <div className={`group mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-transform duration-500 group-hover:scale-105 flex ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
+              <div className={`group mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-transform duration-500 hover:scale-105 flex ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <blockquote className="text-gray-300 italic text-center relative z-10 group-hover:text-white transition-colors duration-500">
                   Simplicity is the soul of efficiency.
                 </blockquote>
+                {/* Quote decoration */}
+                <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
+                <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
+              </div>
+              <div className={`group mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-transform duration-500 hover:scale-105 flex ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
                 <blockquote className="text-gray-300 italic text-center relative z-10 group-hover:text-white transition-colors duration-500">
                   First, solve the problem. Then, write the code.
                 </blockquote>
@@ -231,6 +238,7 @@ const About = () => {
                 <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
                 <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
               </div>
+
             </div>
           </div>
         </div>
