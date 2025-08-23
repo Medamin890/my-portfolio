@@ -169,26 +169,26 @@ const About = () => {
               </div>
       
               {/* Enhanced Quote */}
-              <div className={`flex mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-transform duration-500 hover:scale-105  ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 "></div>
-                
-                <blockquote className="text-gray-300 italic text-center relative z-10hover:text-white transition-colors duration-500">
-                  Simplicity is the soul of efficiency.
-                </blockquote>
-                {/* Quote decoration */}
-                <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
-                <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
-              </div>
-              <div className={`flex mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-transform duration-500 hover:scale-105  ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 "></div>
-                
-                <blockquote className="text-gray-300 italic text-center relative z-10 hover:text-white transition-colors duration-500">
-                  First, solve the problem. Then, write the code.
-                </blockquote>
-                {/* Quote decoration */}
-                <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
-                <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
-              </div>
+                <div className="group flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5  "></div>
+                  <blockquote className="text-gray-300 italic text-center relative z-10hover:text-white transition-colors duration-500">
+                    Simplicity is the soul of efficiency.
+                  </blockquote>
+                  {/* Quote decoration */}
+                  <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
+                  <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
+               </div>
+
+                <div className="group flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5  "></div>
+                  
+                  <blockquote className="text-gray-300 italic text-center relative z-10 hover:text-white transition-colors duration-500">
+                    First, solve the problem. Then, write the code.
+                  </blockquote>
+                  {/* Quote decoration */}
+                  <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
+                  <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
+               </div>
 
             </div>
           </div>
