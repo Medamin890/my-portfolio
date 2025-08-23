@@ -143,11 +143,11 @@ const Index = () => {
             <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
           <p className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
-            © 2025 Mohamed Amine Portfolio -full stuk devz
+            © 2025 Mohamed Amine Portfolio - Full Stack Developer
           </p>
           <div className="mt-2 flex items-center justify-center space-x-1">
             <span className="text-gray-500 text-sm">Made with</span>
-            <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+            <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
             <span className="text-gray-500 text-sm">and lots of coffee</span>
           </div>
         </div>
