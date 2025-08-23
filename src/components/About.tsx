@@ -169,7 +169,7 @@ const About = () => {
               </div>
       
               {/* Enhanced Quote */}
-                  <div className="grid grid-cols-1 gap-4"></div>
+                  <div className="grid grid-cols-1 gap-4">
                     <div className="group flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5  "></div>
                       <blockquote className="text-gray-300 italic text-center relative z-10hover:text-white transition-colors duration-500 my-2">
