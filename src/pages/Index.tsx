@@ -139,11 +139,11 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-            <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-          </div>
+            <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+          </div>1
           <p className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
-            © 2024 Full Stack Developer. Built with React & Tailwind CSS
+            © 2025 Mohamed Amine Portfolio
           </p>
           <div className="mt-2 flex items-center justify-center space-x-1">
             <span className="text-gray-500 text-sm">Made with</span>
