@@ -103,10 +103,18 @@ const Hero = () => {
             </span>
             
             {/* Lightning effect on hover */}
-            <div className="absolute -top-4 -right-4 opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <Zap className="w-8 h-8 text-yellow-400 animate-bounce" />
-            </div>
+            {
+                Array.from({ length: 10 }).map((_, index) => (
+                  <div
+                    key={index}
+                    className="absolute -top-4 -right-4 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <Zap className="w-8 h-8 text-yellow-400 animate-bounce" />
+                  </div>
+                ))
+              }
           </h1>
+          
           
           <div className="text-2xl md:text-3xl text-gray-300 h-10 flex items-center justify-center animate-slide-in-left">
             <span className="mr-2">I'm a</span>
@@ -121,7 +129,7 @@ const Hero = () => {
         </div>
 
         {/* Description with typewriter reveal */}
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4 leading-relaxed animate-fade-in-up opacity-0" style={{ animationDelay: '1s', animationFillMode: 'backwards' }}>
+        <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4 font-sans leading-relaxed animate-fade-in-up opacity-0" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
           Passionate about creating amazing digital experiences with modern technologies. 
           I build scalable web applications and bring ideas to life through code.
         </p>
