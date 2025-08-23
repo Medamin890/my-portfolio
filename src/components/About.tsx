@@ -218,7 +218,7 @@ const About = () => {
                 </div>
               </div>
               {/* Enhanced Quote */}
-              <div className={`group mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-transform duration-500 group-hover:scale-105 relative overflow-hidden  ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
+              <div className={`group mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl border border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-transform duration-500 group-hover:scale-105 flex ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '1.2s' }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <blockquote className="text-gray-300 italic text-center relative z-10 group-hover:text-white transition-colors duration-500">
