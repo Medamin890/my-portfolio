@@ -192,7 +192,7 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="flex flex-col items-center space-y-2">
             <ChevronDown className="h-8 w-8 text-gray-400 animate-pulse" />
             <div className="w-0.5 h-8 bg-gradient-to-b from-gray-400 to-transparent animate-pulse"></div>
