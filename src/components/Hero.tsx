@@ -44,7 +44,7 @@ const Hero = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`
+              animationDuration: `${3 + Math.random() * 1}s`
             }}
           />
         ))}
@@ -63,7 +63,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-20">
         {/* Profile Image with advanced animations */}
-        <div className="mb-8 relative inline-block group">
+        <div className="mb-8 mt-2 relative inline-block group">
           <div className="relative">
             <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1 animate-pulse hover:animate-none transition-all duration-500 hover:scale-110">
               <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center relative overflow-hidden group-hover:bg-gray-700 transition-colors duration-500">
@@ -96,7 +96,7 @@ const Hero = () => {
 
         {/* Name and Title with staggered animations */}
         <div className="mb-8 space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in-up relative">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up relative">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent hover:animate-pulse transition-all duration-300">
               Mohamed Amine
               Sadraoui
@@ -121,13 +121,13 @@ const Hero = () => {
         </div>
 
         {/* Description with typewriter reveal */}
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in-up opacity-0" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
+        <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4 leading-relaxed animate-fade-in-up opacity-0" style={{ animationDelay: '1s', animationFillMode: 'backwards' }}>
           Passionate about creating amazing digital experiences with modern technologies. 
           I build scalable web applications and bring ideas to life through code.
         </p>
 
         {/* Enhanced Social Links */}
-        <div className="flex justify-center space-x-6 mb-8">
+        <div className="flex justify-center space-x-6 mb-4">
           {[
             { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-gray-300' },
             { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:text-blue-400' },
@@ -155,7 +155,7 @@ const Hero = () => {
         </div>
 
         {/* Enhanced CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up opacity-0" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up opacity-0" style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}>
           <a
             href="#projects"
             className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-500 hover:scale-110 overflow-hidden"
