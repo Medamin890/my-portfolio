@@ -169,25 +169,33 @@ const About = () => {
               </div>
       
               {/* Enhanced Quote */}
-                <div className="group flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5  "></div>
-                  <blockquote className="text-gray-300 italic text-center relative z-10hover:text-white transition-colors duration-500">
-                    Simplicity is the soul of efficiency.
-                  </blockquote>
-                  {/* Quote decoration */}
-                  <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
-                  <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
-               </div>
+                  <div className="grid grid-cols-1 gap-4"></div>
+                    <div className={`group relative flex items-center space-x-3 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer overflow-hidden ${
+                      hoveredInterest === 1 ? 'shadow-2xl shadow-blue-500/25' : ''
+                    }`}
+                    style={{ animationDelay: `${0.7 + 1 * 0.1}s` }}
+                    onMouseEnter={() => setHoveredInterest(1)}
+                    onMouseLeave={() => setHoveredInterest(null)}
+                  >
+                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5  "></div>
+                      <blockquote className="text-gray-300 italic text-center relative z-10hover:text-white transition-colors duration-500">
+                        Simplicity is the soul of efficiency.
+                      </blockquote>
+                      {/* Quote decoration */}
+                      <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
+                      <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
+                  </div>
 
-                <div className="group flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5  "></div>
-                  
-                  <blockquote className="text-gray-300 italic text-center relative z-10 hover:text-white transition-colors duration-500">
-                    First, solve the problem. Then, write the code.
-                  </blockquote>
-                  {/* Quote decoration */}
-                  <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
-                  <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
+                    <div className="group relative flex items-center space-x-3 p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5  "></div>
+                      
+                      <blockquote className="text-gray-300 italic text-center relative z-10 hover:text-white transition-colors duration-500">
+                        First, solve the problem. Then, write the code.
+                      </blockquote>
+                      {/* Quote decoration */}
+                      <div className="absolute top-2 left-4 text-6xl text-blue-400/20 font-serif">"</div>
+                      <div className="absolute bottom-2 right-4 text-6xl text-blue-400/20 font-serif rotate-180">"</div>
+                  </div>
                </div>
 
             </div>
