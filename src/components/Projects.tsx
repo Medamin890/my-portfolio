@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ExternalLink, Github, Code, Smartphone, Globe, Zap, Star, Eye, Sparkles, Calendar, Building2 } from 'lucide-react';
 import techstoreimg from '../assets/techstore.png'
+import dhashbordIMG from '../assets/dhashbordpj.png'
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -11,7 +12,7 @@ const Projects = () => {
     {
       title: 'Debt Recovery Management System',
       description: 'A comprehensive web application designed to digitalize debt recovery processes for SBA Company. Features responsive design and secure backend implementation.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      image: dhashbordIMG,
       technologies: ['React.js', 'Spring Boot', 'MySQL', 'Bootstrap'],
       category: 'Web Application',
       icon: Globe,
